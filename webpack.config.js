@@ -56,26 +56,28 @@ const configs = [{
     ],
 		externals: {
 			'uikit': 'UIkit',
-			'uikit/dist/js/uikit-icons': 'window' //dummy for external builds
+			'uikit/dist/js/uikit-icons': 'window', //dummy for external builds
+			'uikit/dist/css/uikit.css': 'window' //dummy for external builds
 		}
 	}
 
 ];
 
 //add typescript related settings
-module.exports = configs;
-[].concat(configs.map(conf => {
+// module.exports = configs;
 
+module.exports = configs.concat(configs.map(conf => {
 	const alteration = JSON.parse(JSON.stringify(conf)); // clone deep
-
 	//add typescript settings
 	alteration.entry = alteration.entry.replace('.js', '.ts');
-	alteration.output.filename = alteration.output.filename.replace('.js', '.ts.js');
-	alteration.module.rules.push({
-		test: /\.tsx?$/,
+  alteration.output.filename = alteration.output.filename.replace('.js', '.ts.js');
+  
+	alteration.module.rules = conf.module.rules.concat({
+    test: /\.ts$/,
 		use: 'ts-loader',
 		exclude: /node_modules/
   })
+  alteration.plugins = conf.plugins; //restore plugins
   alteration.resolve.extensions = ['.ts'];
 	return alteration;
 }));
