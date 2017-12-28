@@ -4,15 +4,40 @@
         <title></title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            .rotated {
+                transform: rotate(-90deg);
+                font-size: 100%;
+            }
+        </style>
     </head>
     <body>
-        bundle-js
-        <iframe src="bundle.html"></iframe>
-        bundle-ts
-        <iframe src="bundle.ts.html"></iframe>
-        external-js
-        <iframe src="external.html"></iframe>
-        external-js
-        <iframe src="external.ts.html"></iframe>
+
+        <table>
+            <tr>
+                <th></th>
+                <th>bundled</th>
+                <th>external</th>
+                <th>seperated</th>
+            </tr>
+            <tr>
+                <td>
+                    <h1 class="rotated">Javscript (ES6)</h1>
+                </td>
+                <td><iframe src="bundle.ts.html"></iframe></td>
+                <td><iframe src="external.ts.html"></iframe></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <h1 class="rotated">TypeScript</h1>
+                </td>
+                <td><iframe src="bundle.html"></iframe></td>
+                <td><iframe src="external.html"></iframe></td>
+                <td><iframe src="separated.html"></iframe></td>
+                <td></td>
+            </tr>
+        </table>
+        
     </body>
 </html>
