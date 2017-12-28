@@ -4,8 +4,10 @@
   "description": "UIkit & typescript & vscode",
   "main": "index.js",
   "scripts": {
+    "build": "webpack --devtool sourcemap",
     "watch": "webpack -w --devtool sourcemap",
-    "install": "cd node_modules/uikit && npm i && npm run compile"
+    "install:uikit": "cd node_modules/uikit && npm i && npm run compile",
+    "install": "npm run install:uikit && webpack --devtool sourcemap"
   },
   "author": "Jan Manuel Schlieper",
   "license": "MIT",

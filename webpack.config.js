@@ -90,7 +90,7 @@ module.exports = configs.concat(configs.map(conf => {
 		}
 	},'css-loader'];
 	
-	alteration.module.rules = [babelLoader, advancedCSSLoader, {
+	alteration.module.rules = [advancedCSSLoader, {
     test: /\.ts$/,
 		use: 'ts-loader',
 		exclude: /node_modules/

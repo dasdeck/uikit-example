@@ -11,3 +11,7 @@ NOTE:
 
 The install script will also install and compile UIkit inside it's node_modules folder as some files
 for the extended examples are not distributed inside the npm package.
+
+## TODO
+
+[ ] bundle css with typescript
