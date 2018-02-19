@@ -42,6 +42,17 @@ const configs = [
 	
 	// setup top load UIkit internally
 	{
+		entry: './src/bundle.css.js',
+		module: {
+			rules
+		},
+		resolve,
+		output: {
+			filename: 'bundle.css.js',
+			path: path.resolve(__dirname, 'dist')
+		}
+	},
+	{
 		entry: './src/bundle.js',
 		module: {
 			rules

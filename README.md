@@ -9,8 +9,11 @@ Open the example at `examples/index.html`.
 
 NOTE:
 
-The install script will also install and compile UIkit inside it's node_modules folder as some files
-for the extended examples are not distributed inside the npm package.
+In order to get the "separate" examples working, UIkit has to be built.
+Type `npm run install:build` to compile UIkit inside it's node_modules folder.
+This creates the files neccesary
+for the extended examples.
+These files are not (yet) distributed inside the npm package.
 
 ## TODO
 

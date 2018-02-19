@@ -7,7 +7,7 @@
     "build": "webpack --devtool sourcemap",
     "watch": "webpack -w --devtool sourcemap",
     "install:uikit": "cd node_modules/uikit && npm i && npm run compile",
-    "install": "npm run install:uikit && webpack --devtool sourcemap"
+    "install:build": "npm run install:uikit && webpack --devtool sourcemap"
   },
   "author": "Jan Manuel Schlieper",
   "license": "MIT",
