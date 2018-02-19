@@ -1,3 +1,3 @@
 import UIkit from 'uikit';
 
-UIkit.notification('Hello world.');
+UIkit.notification('Hello world.<span uk-icon icon="home"></span>');

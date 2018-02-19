@@ -4,4 +4,4 @@ import 'uikit/dist/css/uikit.css';
 
 
 UIkit.use(Icons);
-UIkit.notification('Hello world.');
+UIkit.notification('Hello world.<span uk-icon icon="home"></span>');
